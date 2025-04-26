@@ -1,0 +1,702 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+:root{
+    --main-color: #6C0BA8;
+    --transparentColor: #6C0BA840;
+    --secondary-color: #FF00DE;
+}
+
+
+
+.container{
+    width: 79%;
+    margin: auto;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin-top: 180px;
+}
+
+/*ÍNICIO DO HEADER*/
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 900;
+}
+
+
+section.top{
+    background-color: var(--main-color);
+}
+
+section.top .container{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    align-items: center;
+}
+
+section.top .container p{
+    color: #fff;
+    text-transform: capitalize;
+}
+
+section.menu{
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+section.menu .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+section.menu .container nav{
+    display: flex;
+    gap: 20px;
+}
+
+section.menu .container nav ul{
+    display: flex;
+    gap: 30px;
+}
+
+section.menu .container nav ul li a{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--main-color);
+}
+
+section.menu .container nav ul li{
+    position: relative;
+    padding: 10px 0;
+}
+section.menu .container nav ul li::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transition: 0.3s linear;
+}
+section.menu .container nav ul li:hover::after{
+    width: 100%;
+}
+section.banner .container .txt button,
+main section.hero_header .container .text button,
+section.menu .container  nav button{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #25d366;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    position: relative;
+    z-index: 2;
+}
+
+section.menu .container nav button::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #128c7e;
+    transition: width 0.5s linear;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+section.menu .container nav button:hover::before{
+    width: 100%;
+}
+
+/*FIM DO HEADER*/
+
+/*ÍNICIO DO MAIN*/
+
+
+/*ÍNICIO DO MAIN SECTION*/
+section.banner .container .txt button ai,
+main section.hero_header .container .text button a i,
+section.menu .container nav button a i{
+    font-size: 1.2em;
+}
+
+section.banner .container .txt button a,
+main section.hero_header .container .text button a,
+section.menu .container  nav button a{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+}
+
+main section.hero_header .container{
+    display: flex;
+    align-items: center;
+}
+
+
+main section.hero_header .container .text p{
+    font-family: "Jim Nightshade", cursive;
+    color: var(--secondary-color);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+main section.hero_header .container .text h2{
+    font-size: 25px;
+    text-align: justify;
+    color: var(--main-color);
+}
+
+main section.hero_header .container .text span{
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+section.banner .container .txt button,
+main section.hero_header .container .text button{
+    margin-top: 10px;
+    animation: zoom 1.5s infinite alternate;
+    position: relative;
+    
+}
+section.banner .container .txt button::before,
+main section.hero_header .container .text button::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #128c7e;
+    border-radius: 5px;
+    transition:width 0.5s ease;
+    z-index: -1;
+}
+section.banner .container .txt button:hover,
+main section.hero_header .container .text button:hover{
+    animation: none;
+}
+
+section.banner .container .txt button:hover::before,
+main section.hero_header .container .text button:hover::before{
+    width: 100%;
+    
+}
+
+@keyframes zoom{
+    from{
+        transform: scale(1.1);
+    }
+}
+main section.hero_header .container .img{
+    position: relative;
+}
+
+main section.hero_header .container .img img:nth-child(1),main section.hero_header .container .img img:nth-child(2), main section.hero_header .container .img img:nth-child(3), main section.hero_header .container .img img:nth-child(4){
+    width: 50px;
+}
+
+main section.hero_header .container .img img:nth-child(1){
+    position: absolute;
+    top: 0;
+    right: 150px;
+    animation: volta 1s infinite alternate;
+}
+
+main section.hero_header .container .img img:nth-child(2){
+    position: absolute;
+    bottom: 80%;
+    right: 50px;
+    animation: volta 1s infinite alternate;
+}
+
+main section.hero_header .container .img img:nth-child(4){
+    position: absolute;
+    bottom: 40%;
+    right: 20px;
+    animation: volta 1s infinite alternate;
+}
+
+main section.hero_header .container .img img:nth-child(3){
+    position: absolute;
+    bottom: 60%;
+    right: 20px;
+    animation: volta 1s infinite alternate;
+}
+
+@keyframes volta{
+    from{
+        transform: scale(1.2);
+    }
+}
+
+/*FIM DO MAIN SECTION*/
+
+/*ÍNICIO DO MAIN CARDS*/
+
+section.cards .container{
+    display: flex;
+    justify-content: center;
+}
+
+section.cards .container .card_geral{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: -30px;
+    z-index: 1;
+}
+
+section.cards .container .card{
+    background: linear-gradient(200deg, #6C0BA8 0%, #FF00DE 100%);
+    color: white;
+    padding: 30px 20px;
+    border-radius: 20px;
+    width: 32%;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+section.cards .container .card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(108, 11, 168, 0.4);
+}
+
+section.cards .container .card i{
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+section.cards .container .card h3{
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+section.cards .container .card p{
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/*FIM DO MAIN CARDS*/
+
+/*ÍNICIO DO MAIN SERVICOS*/
+section.servicos{
+    margin-top: 60px;
+}
+
+.txt .titulo{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.titulo h2{
+    font-size: 35px;
+    color: var(--main-color);
+    text-transform: capitalize;
+}
+
+.txt p{
+    font-size: 15px;
+    font-weight: normal;
+    color: var(--secondary-color);
+    margin-top: -10px;
+}
+
+.barra{
+    width: 100px;
+    height: 2px;
+    background-color: var(--secondary-color);
+}
+
+section.servicos .container .card_geral{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+section.servicos .container .card_geral .card{
+    background: linear-gradient(200deg, #6C0BA8 0%, #FF00DE 100%);
+    color: white;
+    padding: 30px 20px;
+    border-radius: 20px;
+    width: 32%;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section.servicos .container .card_geral .card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(108, 11, 168, 0.4);
+}
+
+section.servicos .container .card_geral .card i{
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+section.servicos .container .card_geral .card h2{
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+section.servicos .container .card_geral .card p{
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+section.sobre-nos .container .button,
+section.servicos .button{
+    display: flex;
+    justify-content: center;
+}
+
+section.sobre-nos .container .button button,
+section.servicos .button button{
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 15px;
+    border: none;
+    gap: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    background: linear-gradient(200deg, var(--main-color) 0%, var(--secondary-color) 100%);
+    transition: 0.3s ease-in-out;
+}
+
+section.sobre-nos .container .button button a,
+section.servicos .button button a{
+    color: #fff;
+}
+
+section.sobre-nos .container .button button:hover,
+section.servicos .button button:hover{
+    letter-spacing: 2px;
+}
+/*FIM DO MAIN SERVICOS*/
+
+
+/*ÍNICIO DO MAIN SOBRE NOS*/
+section.sobre-nos .img_detalhes{
+    padding: 40px 0;
+}
+
+section.sobre-nos .img_detalhes{
+    display: flex;
+    width: 100%;
+    gap: 30px;
+}
+section.sobre-nos .img_detalhes .img_workGroup{
+    background: url('../img/Sobre-nos/grupo\ de\ trabalho.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    position: relative;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #00000073;
+}
+
+section.sobre-nos .img_detalhes .img_geral .img_escritorio h2,
+section.sobre-nos .img_detalhes .img_geral .img_filosofia h2,
+section.sobre-nos .img_detalhes .img_workGroup h2{
+    position: absolute;
+    left: 20px;
+    bottom: 40px;
+    font-weight: bold;
+    color: #fff;
+    z-index: 1;
+}
+
+section.sobre-nos .img_detalhes .img_geral .img_escritorio p,
+section.sobre-nos .img_detalhes .img_geral .img_filosofia p,
+section.sobre-nos .img_detalhes .img_workGroup p{
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    color: var(--secondary-color);
+    z-index: 1;
+}
+
+section.sobre-nos .img_detalhes .img_geral{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+}
+
+section.sobre-nos .img_detalhes .img_geral .img_filosofia{
+    background: url('../img/Sobre-nos/nossa\ filosofia.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 275px;
+    border-radius: 5px;
+    position: relative;
+}
+
+section.sobre-nos .img_detalhes .img_geral .img_escritorio{
+    background: url('../img/Sobre-nos/escritório.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 270px;
+    border-radius: 5px;
+    position: relative;
+}
+
+section.sobre-nos .container .cards{
+    display: flex;
+    gap: 20px;
+}
+
+section.sobre-nos .container .cards .card{
+    border-right: 3px solid var(--main-color);
+    padding: 20px 15px;
+}
+
+section.sobre-nos .container .cards .card:nth-child(3){
+    border: none;
+}
+
+section.sobre-nos .container .cards .card h2{
+    color: var(--main-color);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+section.sobre-nos .container .cards .card p{
+    color: var(--secondary-color);
+    font-weight: normal;
+    line-height: 22px;
+    font-size: 14px;
+}
+/*FIM DO MAIN SOBRE NOS*/
+/*ÍNICIO DO MAIN BANNER*/
+section.banner{
+    padding: 40px 0;
+    background-color: var(--main-color);
+    margin-top: 50px;
+}
+
+section.banner .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+section.banner .container .txt{
+    width: 40%;
+}
+section.banner .container .txt h2{
+    font-size: 20px;
+    line-height: 25px;
+    color: #fff;
+}
+section.banner .container .txt h2 span{
+    color: #25d366;
+    font-weight: bold;
+}
+
+section.banner .container .videos img{
+    width: 250px;
+}
+
+
+
+/*FIM DO MAIN BANNER*/
+
+/*ÍNICIO DO FOOTER*/
+footer{
+    border-top: 2px solid var(--secondary-color);
+}
+
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+footer .container .col_gr{
+    width: 40%;
+}
+
+footer .container .col_gr img{
+    width: 120px;
+}
+
+footer .container .col_gr .atendimento{
+    display: flex;
+    align-items: center;
+    margin: 14px 0;
+    gap: 20px;
+}
+
+footer .container .col_gr .atendimento i{
+    font-size: 60px;
+    color: var(--main-color);
+}
+
+footer .container .col_gr .atendimento h5{
+    font-size: 18px;
+    color: var(--main-color);
+    margin-bottom: 10px;
+
+}
+
+footer .container .col_gr .atendimento h6{
+    font-size: 16px;
+    color: var(--secondary-color);
+}
+
+footer .container .col_gr p{
+    color: var(--main-color);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+footer .container .linhas{
+    width: 18%;
+}
+
+footer .container .linhas h4{
+    font-size: 18px;
+    color: var(--main-color);
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+footer .container .linhas .links{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+footer .container .linhas .links a{
+    color: var(--main-color);
+    transition: 0.3s linear;
+    text-transform: capitalize;
+}
+
+footer .container .linhas .links a:hover{
+    color: var(--secondary-color);
+    transform: translateX(3px);
+}
+
+footer section.direitos{
+    background-color: var(--main-color);
+}
+footer section.direitos .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer section.direitos .container .midias{
+    display: flex;
+    gap: 20px;
+}
+
+footer section.direitos .container .midias a{
+    font-size: 44px;
+    transition: 0.3s linear;
+}
+
+footer section.direitos .container .midias a:hover{
+    transform: scale(1.1);
+}
+
+footer section.direitos .container .midias a:nth-child(1){
+    color: #25D366;
+}
+footer section.direitos .container .midias a:nth-child(2){
+    color: #E4405F;
+}
+footer section.direitos .container .midias a:nth-child(3){
+    color: #1877F2;
+}
+
+footer section.direitos .container p{
+    color: #fff;
+}
+
+footer section.direitos .container p span{
+    color: var(--secondary-color);
+}
+/*ÍNICIO DO FOOTER*/
+@keyframes isRypling
+{
+    to{
+        opacity: 0;
+        transform: scale(1.15, 1.5);
+    }
+}
+
+
+
+::-webkit-scrollbar{
+    background-color: var(--main-color);
+    width: 10px;
+}
+
+::-webkit-scrollbar-button{
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(200deg, #25d366, #FF00DE);
+    border-radius: 10px;
+}
